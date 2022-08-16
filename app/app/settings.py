@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # THIRD-PARTY APPS
+    'rest_framework',
+    'drf_spectacular',
+
     # DEFINED APPS
     'core',
 ]
@@ -77,6 +81,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# Configuring postgresql for database.
 
 DATABASES = {
     'default': {
@@ -132,4 +137,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Enabling custom user as default user model.
+
 AUTH_USER_MODEL = 'core.User'
+
+# DRF Spectacular configuration for generating schema
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
+}
