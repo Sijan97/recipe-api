@@ -42,10 +42,12 @@ INSTALLED_APPS = [
 
     # THIRD-PARTY APPS
     'rest_framework',
+    'rest_framework.authtoken',
     'drf_spectacular',
 
     # DEFINED APPS
     'core',
+    'user',
 ]
 
 MIDDLEWARE = [
